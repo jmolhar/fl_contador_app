@@ -11,7 +11,13 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[Text('Vini'), SizedBox(width: 50.0), Text('Mono')],
+          children: <Widget>[
+            Text('Instalación'),
+            SizedBox(width: 50.0),
+            Text('Flutter'),
+            Text('y'),
+            Text('Git'),
+          ],
         ),
       ),
     );
