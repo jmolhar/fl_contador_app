@@ -28,7 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     const tamanoLetra = TextStyle(fontSize: 40);
-
+    const srcImagen =
+        'https://statics.memondo.com/p/99/mmds/2024/09/MMD_1210327_e0ffb87aa7b947b3b6ae9ffa9668dda8_futbol_vinicius_balon_de_playa.jpg?cb=8784951';
     return Scaffold(
       backgroundColor: Colors.deepOrange,
       appBar: AppBar(title: Text('Contador'), elevation: 10.0),
@@ -36,12 +37,18 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Numero de clics', style: tamanoLetra),
+            Text(
+              'Balones de playa de Vinicius',
+              style: tamanoLetra,
+              textAlign: TextAlign.center,
+            ),
             SizedBox(height: 20.0),
             Text('$contador', style: tamanoLetra),
+            Image.network(srcImagen),
           ],
         ),
       ),
+
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: CustomizedFloatingActionButton(
         incrementarFn: incrementar,
